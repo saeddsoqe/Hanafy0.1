@@ -3,7 +3,7 @@ This is an educational Board for children and for those who have passion, inspir
 Our vision 
 Everyone has the right to learn. it doesn't matter his color, his gender, his nationality and even the poor people.    
 
-In the board file the schamatic, the layout, 3D model, and a Bill Of Material(BOM) are provided. the used softwares for designing are Eagle for the schamatic and layout, and Fusion 360 for the 3D model.
+In the board file the schamatic, the layout, 3D model, and a Bill Of Material(BOM), graber file are provided. the used softwares for designing are Eagle for the schamatic and layout, and Fusion 360 for the 3D model.
 The Hanafy board features: 
   The board based on ARM architecture.
   ESP32 Dev Board. Dual core processor.  
