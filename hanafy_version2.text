@@ -7,9 +7,9 @@ in this file we think, dream to provide more functions and features.
 
 3- Supply almost all types of DC motors like Servo, Stepper, Brushless DC motors, Ordinary DC motors 
 
-3- Internet support and connecting to servers 
+4- Internet support and connecting to servers 
 
-4- Connecting between Snap and Microblocks to allow multi satges for different users 
+5- Connecting between Snap and Microblocks to allow multi satges for different users 
 
 6- Controlling RGB with two ways the microconroller or without it 
 
@@ -22,3 +22,5 @@ in this file we think, dream to provide more functions and features.
 10- OLED screen or touch screen 
 
 11- Buzzer 
+
+12- Touching sensors 
