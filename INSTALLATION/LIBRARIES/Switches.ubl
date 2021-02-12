@@ -1,0 +1,56 @@
+module Switchs
+author unknown
+version 1 0 
+description ''
+variables button state 
+
+	spec ' ' 'Active_Switch' 'Active_Switch _' 'auto' '10'
+	spec ' ' 'Get_Switch_State' 'Get_Switch_State _' 'auto' '10'
+
+to Active_Switch button {
+  comment 'this function activat the switch and put it as input '
+  if (button == 1) {
+    digitalWriteOp 16 false
+  } (button == 2) {
+    digitalWriteOp 17 false
+  } (button == 3) {
+    digitalWriteOp 18 false
+  } (button == 4) {
+    digitalWriteOp 19 false
+  }
+}
+
+to Get_Switch_State button {
+  comment 'this function returs he state of the switch.
+if it is pressed it will return 1. if  not pressed will return 0'
+  if (button == 1) {
+    state += (digitalReadOp 16)
+    if (state == 1) {
+      return 1
+    } (state == 0) {
+      return 0
+    }
+  } (button == 2) {
+    state += (digitalReadOp 17)
+    if (state == 1) {
+      return 1
+    } (state == 0) {
+      return 0
+    }
+  } (button == 3) {
+    state += (digitalReadOp 18)
+    if (state == 1) {
+      return 1
+    } (state == 0) {
+      return 0
+    }
+  } (button == 4) {
+    state += (digitalReadOp 19)
+    if (state == 1) {
+      return 1
+    } (state == 0) {
+      return 0
+    }
+  }
+}
+

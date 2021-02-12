@@ -1,0 +1,23 @@
+module 'Light Sensor '
+author unknown
+version 1 0 
+description ''
+variables Sensor_Read 
+
+	spec ' ' 'Draw_Light_Level' 'Draw_Light_Level'
+	spec ' ' 'Get_Light_sensor_Read' 'Get_Light_sensor_Read'
+
+to Draw_Light_Level {
+  forever {
+    Sensor_Read += (analogReadOp 32)
+    printIt Sensor_Read
+  }
+}
+
+to Get_Light_sensor_Read {
+  forever {
+    Sensor_Read += (analogReadOp 32)
+    return Sensor_Read
+  }
+}
+
