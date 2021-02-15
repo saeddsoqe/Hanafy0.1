@@ -9,12 +9,15 @@ Layout
 3D model
 Bill Of Material
 Graber file
+
+
 Features
 Version: H-0.1
 ARM architecture.
 ESP32 Dev Board. Dual core processor.  
 Dimensions: 7.4cm * 7.2cm * 2cm
-  
+
+
 Built-in modules:
 LDR (light sensor)
 Push button *4
@@ -34,6 +37,9 @@ Development environment:Block programming
 
 Release date:March 2021
     Autodesk Eagle for schematic and layout design, and Fusion 360 for the 3D design.  
+
+
+
 
 
 // Extra info
