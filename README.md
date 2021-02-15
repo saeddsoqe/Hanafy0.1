@@ -1,7 +1,7 @@
 # Hanafy 0.1
 
 H 0.1
-The H series is an open-source educational programmable circuit board powered by regular alkaline batteries. The H series is a safe, easy-to-use, platform for building IoT projects in school at home or for fun
+The H series is an open-source educational programmable circuit board powered by regular alkaline batteries. The H series is a safe, easy-to-use, platform for building projects in school at home or for fun
 
 In this repo:
 Schematic 
