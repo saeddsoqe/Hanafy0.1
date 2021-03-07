@@ -1,0 +1,49 @@
+module RGB_V1
+author unknown
+version 1 0 
+description ''
+
+	spec ' ' 'Choose_Color' 'Choose_Color _ _ _' 'bool bool bool' true true true
+	spec ' ' 'Choose_Color_And_Brightness' 'Choose_Color_And_Brightness _ _ _ _ _ _' 'bool auto bool auto bool auto' true '10' true '10' true '10'
+
+to Choose_Color RED GREEN BLUE {
+  comment 'you can choose a single color or mixing between them  '
+  if (RED == (booleanConstant true)) {
+    comment 'connected in pin 23 in micro'
+    digitalWriteOp 23 true
+  } (RED == (booleanConstant false)) {
+    digitalWriteOp 23 false
+  }
+  if (GREEN == (booleanConstant true)) {
+    comment 'connected in pin 19 in micro'
+    digitalWriteOp 19 true
+  } (GREEN == (booleanConstant false)) {
+    digitalWriteOp 19 false
+  }
+  if (BLUE == (booleanConstant true)) {
+    comment 'connected in pin 18 in micro'
+    digitalWriteOp 18 true
+  } (BLUE == (booleanConstant false)) {
+    digitalWriteOp 18 false
+  }
+}
+
+to Choose_Color_And_Brightness RED R_Brightness GREEN G_Brightness BLUE B_Brightness {
+  comment 'This function controlles the color and its brightness level enable the desired color and its brightness level the max level 100%'
+  if (RED == (booleanConstant true)) {
+    analogWriteOp 23 ((R_Brightness / 100) * 1023)
+  } (RED == (booleanConstant false)) {
+    digitalWriteOp 23 false
+  }
+  if (GREEN == (booleanConstant true)) {
+    analogWriteOp 19 ((G_Brightness / 100) * 1023)
+  } (GREEN == (booleanConstant false)) {
+    digitalWriteOp 19 false
+  }
+  if (BLUE == (booleanConstant true)) {
+    analogWriteOp 18 ((B_Brightness / 100) * 1023)
+  } (BLUE == (booleanConstant false)) {
+    digitalWriteOp 18 false
+  }
+}
+
