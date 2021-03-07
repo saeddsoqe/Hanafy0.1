@@ -1,0 +1,78 @@
+module Robot_Motion
+author unknown
+version 1 0 
+description ''
+
+	spec ' ' 'Left_Motor_Backward' 'Left_Motor_Backward'
+	spec ' ' 'Left_Motor_Forward' 'Left_Motor_Forward'
+	spec ' ' 'Left_Motor_Stop' 'Left_Motor_Stop'
+	spec ' ' 'Right_Motor_Backward' 'Right_Motor_Backward'
+	spec ' ' 'Right_Motor_Forward' 'Right_Motor_Forward'
+	spec ' ' 'Right_Motor_Stop' 'Right_Motor_Stop'
+	spec ' ' 'Robot_Move_Backward' 'Robot_Move_Backward'
+	spec ' ' 'Robot_Move_Forward' 'Robot_Move_Forward'
+	spec ' ' 'Robot_Stop' 'Robot_Stop'
+
+to Left_Motor_Backward {
+  comment 'rotates clockwise'
+  digitalWriteOp 22 true
+  digitalWriteOp 13 false
+}
+
+to Left_Motor_Forward {
+  comment 'rotates anti clockwise'
+  digitalWriteOp 22 false
+  digitalWriteOp 13 true
+}
+
+to Left_Motor_Stop {
+  comment 'stop left motor'
+  digitalWriteOp 22 false
+  digitalWriteOp 13 false
+}
+
+to Right_Motor_Backward {
+  comment 'rotates anti clockwise'
+  digitalWriteOp 27 false
+  digitalWriteOp 4 true
+}
+
+to Right_Motor_Forward {
+  comment 'rotates clockwise'
+  digitalWriteOp 27 true
+  digitalWriteOp 4 false
+}
+
+to Right_Motor_Stop {
+  comment 'stop right motor'
+  digitalWriteOp 27 false
+  digitalWriteOp 4 false
+}
+
+to Robot_Move_Backward {
+  comment 'rotates anti clockwise'
+  digitalWriteOp 27 false
+  digitalWriteOp 4 true
+  comment 'rotates clockwise'
+  digitalWriteOp 22 true
+  digitalWriteOp 13 false
+}
+
+to Robot_Move_Forward {
+  comment 'rotates clockwise'
+  digitalWriteOp 27 true
+  digitalWriteOp 4 false
+  comment 'rotates anti clockwise'
+  digitalWriteOp 22 false
+  digitalWriteOp 13 true
+}
+
+to Robot_Stop {
+  comment 'stop right motor'
+  digitalWriteOp 27 false
+  digitalWriteOp 4 false
+  comment 'stop left motor'
+  digitalWriteOp 22 false
+  digitalWriteOp 13 false
+}
+
